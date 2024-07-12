@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add 2 numbers</title>
+    <style>
+        th{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>ADD 2 numbers</h1>
+    <table>
+        <tr>
+            <th>First Number:</th>
+            <td><input type="text" id="num1"></td>
+        </tr>
+        <tr>
+            <th>Second Number:</th>
+            <td><input type="text" id="num2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            	<button onclick="add()" id="btn">ADD</button>
+            	<button type="reset" id="rstbtn" onclick="reset()">RESET</button>
+            </td>
+        </tr>
+        <tr>
+            <th>Result:</th>
+            <td id="result"></td>
+        </tr>
+    </table>
+    <script>
+        let flag1 = false
+        let flag2 = false
+        function add()
+        {
+            let a = document.querySelector("#num1").value
+            let b = document.querySelector("#num2").value
+            if(a == "")
+            {
+                alert("First Number is empty!!")
+                document.getElementById("num1").focus();
+            }
+            else
+            {
+                flag1 = true
+                a = Number(a)
+            }
+            if(b == "")
+            {
+                alert("Second Number is empty!!")
+                document.getElementById("num2").focus();
+            }
+            else
+            {
+                flag2 = true
+                b = Number(b)
+            }
+            if(isNaN(a) || isNaN(b))
+            {
+                alert("Input value(s) is Not a Number")
+            }
+            else
+            {
+                if(flag1 && flag2)
+            	    document.querySelector("#result").innerHTML = a + b
+            }
+        }
+        function reset()
+        {
+            document.querySelector("#num1").value = ""
+            document.querySelector("#num2").value = ""
+            document.querySelector("#result").innerHTML = ""
+        }
+    </script>
+</body>
+</html>

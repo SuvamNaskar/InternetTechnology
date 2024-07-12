@@ -70,6 +70,13 @@
 	height: 24px;
 }
 
+#tgBtn{
+	height: 34px;
+	width: 160px;
+	margin-left: calc(50% - 80px);
+	margin-bottom: 2rem;
+}
+
 
 
 
