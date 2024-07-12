@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<title>Hello</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="preloader"></div>
+		<center>
+			<h1>Hello World</h1>
+		</center>
+		<marquee>Ramakrishna Mission Vivekananda Centenary College, Rahara</marquee>
+		<div class="box">
+			<p>Hello World, I am Learning Internet Technology.</p>
+			<p>This lab session is taken by MR sir.</p>
+			<br>
+			After break tag.
+			<div class="cont">
+				<div class="list1">
+					<ul>
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ul>
+					<ul type="circle">
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ul>
+					<ul type="square">
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ul>
+				</div>
+				<div class="list2">
+					<ol>
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ol>
+					<ol type="A">
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ol>
+					<ol type="a">
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ol>
+					<ol type="i">
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ol>
+					<ol type="I">
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ol>
+					<ol start="4">
+						<li>Google Cloud Program</li>
+						<li>Microsoft Azure</li>
+						<li>Amazon Web Services</li>
+					</ol>
+				</div>
+				<div class="table">
+					<table>
+						<thead>
+							<th>Roll No.</th>
+							<th>Name</th>
+							<th>Class</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>ABC</td>
+								<td>VII</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>DEF</td>
+								<td>VI</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<br>
+					<table>
+						<tr>
+							<th>Name</th>
+							<td>Jill</th>
+						</tr>
+						<tr>
+							<th rowspan="2">Phone</td>
+							<td>4839-3928</td>
+						</tr>
+						<tr>
+							<td>4343-8294</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					<p><a href="preloader.gif">Click</a> to view the preloader.</p>
+				</div>
+				<div class="form">
+					<form action="index.html" method="post">
+						<label>First Name:</label><br>
+						<input type="text" name="fname" class="inputField" required><br>
+						<label>Last Name:</label><br>
+						<input type="text" name="lname" class="inputField" required><br>
+						<label for="gender">Gender:</label><br>
+						<input type="radio" name="gender" value="Male" class="inputField">Male<br>
+						<input type="radio" name="gender" value="Female" class="inputField">Female<br>
+						<label for="language">Languages Known:</label><br>
+						<input type="checkbox" name="language" value="ben" class="inputField">Bengali<br>
+						<input type="checkbox" name="language" value="eng" class="inputField">English<br>
+						<input type="checkbox" name="language" value="hin" class="inputField">Hindi<br>
+						<select name="car">
+							<option value="volvo" class="inputField">Volvo</option>
+							<option value="Maruti" class="inputField">Maruti</option>
+							<option value="Arts" class="inputField">Arts</option>
+							<option value="volvo" class="inputField">Volvo</option>
+						</select>
+						<input type="reset" value="RESET" id="btn">
+						<input type="submit" name="submit" value="SUBMIT" id="btn">
+					<form>
+				</div>
+			</div>
+		</div>
+		<script>
+			const loader = document.getElementById("preloader");
+			const blur = document.querySelectorAll(".blur");
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if(entry.isIntersecting){
+						entry.target.classList.add("show");
+					}
+					else{
+						entry.target.classList.remove("show");
+					}
+				});
+			});
+
+			const hiddenElements = document.querySelectorAll(".hidden");
+			hiddenElements.forEach((el) => observer.observe(el));
+
+			window.addEventListener("load", function(){
+				loader.style.display = "none";
+			});
+
+			window.addEventListener("load", function(){
+				blur.style.filter = "blur(0)";
+			});
+		</script>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>	<iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=_pWueXAotumcnbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

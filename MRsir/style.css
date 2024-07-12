@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#preloader{
+	background: url("preloader.gif") no-repeat center center;
+	background-color: #fff;
+	background-position: center center;
+	padding-top: 6vh;
+	position: fixed;
+	z-index: 99;
+	height: 100vh;
+	width: 100vw;
+}
+
+.box{
+	width: 84%;
+	height: auto;
+	border: 2px solid black;
+	margin: 2rem auto;
+	border-radius: 1.5rem;
+	background-color: #a0a0a0;
+	padding: 30px;
+}
+
+.cont{
+	display: flex
+}
+
+.list1, .list2{
+	margin: 20px 40px;
+}
+
+.list1 > ul{
+	margin-bottom: 20px;
+}
+
+.list2 > ol{
+	margin-bottom: 20px;
+}
+
+.table > table{
+	border: 2px dotted red;
+}
+
+.table > table th{
+	border: 2px dashed blue;
+	padding: 3px 34px;
+}
+
+.table > table td{
+	border: 2px solid yellow;
+	background-color: purple;
+	color: white;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.form{
+	padding-left: 30px;
+}
+
+.inputField{
+	margin-bottom: 5px;
+}
+
+#btn{
+	width: 90px;
+	height: 24px;
+}
+
+
+
+
+
+iframe{
+	width: 0;
+	height: 0;
+}
