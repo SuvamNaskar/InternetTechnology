@@ -8,31 +8,50 @@
         th{
             text-align: right;
         }
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: #eeeeee;
+        }
+        .center{
+            margin-top: 4rem;
+            padding: 2rem;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .center:hover{
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
+                        -10px -10px 10px #fff;
+        }
     </style>
 </head>
 <body>
-    <h1>ADD 2 numbers</h1>
-    <table>
-        <tr>
-            <th>First Number:</th>
-            <td><input type="text" id="num1"></td>
-        </tr>
-        <tr>
-            <th>Second Number:</th>
-            <td><input type="text" id="num2"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-            	<button onclick="add()" id="btn">ADD</button>
-            	<button type="reset" id="rstbtn" onclick="reset()">RESET</button>
-            </td>
-        </tr>
-        <tr>
-            <th>Result:</th>
-            <td id="result"></td>
-        </tr>
-    </table>
+    <div class="center">
+        <h1>ADD 2 numbers</h1>
+        <table>
+            <tr>
+                <th>First Number:</th>
+                <td><input type="text" id="num1"></td>
+            </tr>
+            <tr>
+                <th>Second Number:</th>
+                <td><input type="text" id="num2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="add()" id="btn">ADD</button>
+                    <button type="reset" id="rstbtn" onclick="reset()">RESET</button>
+                </td>
+            </tr>
+            <tr>
+                <th>Result:</th>
+                <td id="result"></td>
+            </tr>
+        </table>
+    </div>
     <script>
         let flag1 = false
         let flag2 = false
@@ -50,25 +69,30 @@
                 flag1 = true
                 a = Number(a)
             }
-            if(b == "")
+            if(isNaN(a))
+            {
+                alert("First input is Not a Number")
+                document.querySelector("#num1").value = ""
+                flag1 = false
+            }
+            if(b == "" && flag1)
             {
                 alert("Second Number is empty!!")
                 document.getElementById("num2").focus();
             }
-            else
+            else if(flag1)
             {
                 flag2 = true
                 b = Number(b)
             }
-            if(isNaN(a) || isNaN(b))
+            if(isNaN(b) && flag1)
             {
-                alert("Input value(s) is Not a Number")
+                alert("Second input is Not a Number")
+                document.querySelector("#num2").value = ""
+                flag2 = false
             }
-            else
-            {
-                if(flag1 && flag2)
-            	    document.querySelector("#result").innerHTML = a + b
-            }
+            if(flag1 && flag2)
+                document.querySelector("#result").innerHTML = a + b
         }
         function reset()
         {
