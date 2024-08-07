@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square-Cube Table</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: #eeeeee;
+        }
+        #center{
+            margin-top: 4rem;
+            padding: 2rem;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+            transition: box-shadow 1s;
+        }
+        #center:hover{
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
+                        -10px -10px 10px #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="center">
+        <h1>Adding Numbers terminating with 0</h1>
+        <p id="answer"></p>
+        <button onclick="loop_addition()">START ADDING</button>
+    </div>
+
+    <script>
+        function loop_addition()
+        {
+            let flag1 = true
+            let b = 0, sum = 0, c = 0
+            while(flag1)
+            {
+                b = prompt("Enter Number")
+                if(b == "")
+                {
+                    alert("Field is empty!!")
+                }
+                else
+                {
+                    b = Number(b)
+                    if( b > 0 ) {
+                        flag1 = true
+                    }
+                    else if( b == 0 )
+                    {
+                        flag1 = false
+                        break;
+                    }
+                    else {
+                        flag1 = false
+                        alert("Number is not positive!!")
+                    }
+                }
+                if(isNaN(b))
+                {
+                    alert("Input is Not a Number")
+                    flag1 = false
+                }
+                flag1 = true
+                if(flag1)
+                {
+                    sum += b
+                    c++
+                }
+            }
+            document.querySelector("#answer").innerHTML = "Sum is: " + sum + "<br>Avarage is: " + sum/c
+            flag1 = false
+        }
+    </script>
+</body>
+</html>
