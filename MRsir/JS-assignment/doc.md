@@ -1,0 +1,119 @@
+# JAVASCRIPT ASSIGNMENT
+---
+
+### 1. Write a program in JS to add two numbers entered by the user in textboxes and print the sum in a webpage.
+
+#### Code:
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add 2 numbers</title>
+        <style>
+            th{
+                text-align: right;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: #eeeeee;
+            }
+            .center{
+                margin-top: 4rem;
+                padding: 2rem;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .center:hover{
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
+                            -10px -10px 10px #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <h1>ADD 2 numbers</h1>
+            <table>
+                <tr>
+                    <th>First Number:</th>
+                    <td><input type="text" id="num1"></td>
+                </tr>
+                <tr>
+                    <th>Second Number:</th>
+                    <td><input type="text" id="num2"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="add()" id="btn">ADD</button>
+                        <button type="reset" id="rstbtn" onclick="reset()">RESET</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Result:</th>
+                    <td id="result"></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            let flag1 = false
+            let flag2 = false
+            function add()
+            {
+                let a = document.querySelector("#num1").value
+                let b = document.querySelector("#num2").value
+                if(a == "")
+                {
+                    alert("First Number is empty!!")
+                    document.getElementById("num1").focus();
+                }
+                else
+                {
+                    flag1 = true
+                    a = Number(a)
+                }
+                if(isNaN(a))
+                {
+                    alert("First input is Not a Number")
+                    document.querySelector("#num1").value = ""
+                    flag1 = false
+                }
+                if(b == "" && flag1)
+                {
+                    alert("Second Number is empty!!")
+                    document.getElementById("num2").focus();
+                }
+                else if(flag1)
+                {
+                    flag2 = true
+                    b = Number(b)
+                }
+                if(isNaN(b) && flag1)
+                {
+                    alert("Second input is Not a Number")
+                    document.querySelector("#num2").value = ""
+                    flag2 = false
+                }
+                if(flag1 && flag2)
+                    document.querySelector("#result").innerHTML = a + b
+            }
+            function reset()
+            {
+                document.querySelector("#num1").value = ""
+                document.querySelector("#num2").value = ""
+                document.querySelector("#result").innerHTML = ""
+            }
+        </script>
+    </body>
+    </html>
+
+#### Output:
+![image 1](src/1/img(1).png)
+![image 2](src/1/img(2).png)
+![image 3](src/1/img(3).png)
+![image 4](src/1/img(4).png)
+![image 5](src/1/img(5).png)
+![image 6](src/1/img(6).png)
