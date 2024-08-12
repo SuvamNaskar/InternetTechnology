@@ -13,10 +13,15 @@ class arraylist{
         System.out.println("color: " + colors.get(2));
         colors.set(2, "yellow");
         System.out.println("colors: " + colors);
+
+        for(String color : colors)
+        {
+            System.out.println(color);
+        }
         
-        Scanner sc = new Scanner(System.in);
-        String color = sc.nextLine();
-    	if(colors.contains(color)) System.out.println("Given color found in the list");
-        else System.out.println("Color NOT found");
+       // Scanner sc = new Scanner(System.in);
+       // String color = sc.nextLine();
+    //	if(colors.contains(color)) System.out.println("Given color found in the list");
+   //     else System.out.println("Color NOT found");
     }
 }
